@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
-    title: 'Navigasi Halaman',
-    home: HalamanSatu(),
-  ));
+      title: 'Navigasi Halaman',
+      home: HalamanSatu(),
+      debugShowCheckedModeBanner: false));
 }
 
 class HalamanSatu extends StatelessWidget {
