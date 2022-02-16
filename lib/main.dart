@@ -149,7 +149,22 @@ class HalamanSatu extends StatelessWidget {
                     ),
                   ),
                 ),
-              ))
+              )),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: ElevatedButton(
+                child: const Text('Ke Halaman Dua'),
+                onPressed: () {
+                  if (nilaisurvei.text == "y") {
+                    nilai = 20;
+                  } else {
+                    nilai = 0;
+                  }
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          HalamanDua(kirim: nilai.toString())));
+                }),
+          ),
         ]));
   }
 }
