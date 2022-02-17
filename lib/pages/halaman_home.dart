@@ -56,7 +56,7 @@ class HalamanSatu extends StatelessWidget {
         width: 1500,
         height: 35,
         child: RaisedButton(
-            color: Colors.deepPurpleAccent,
+            color: Colors.black,
             elevation: 6.0,
             child: Text(
               "Pesan Sekarang",
