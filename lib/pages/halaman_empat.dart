@@ -16,30 +16,95 @@ class HalamanEmpat extends StatelessWidget {
           ],
         ),
         body: Center(
-            child: Column(children: <Widget>[
-          Container(
-            child: Text("Apakah anda demam (y/t)?"),
-          ),
-          Container(
+              child: Column(children: <Widget>[
+
+        // Card(
+        // color: Colors.white70,
+        //   child: Container(
+        //     padding: EdgeInsets.all(10.0),
+        //     child: Column(
+        //       children: <Widget>[
+        //         Row(
+        //           children: <Widget>[
+        //             Expanded(child: new Text("Catatan", style: TextStyle(color: Colors.black12),)),
+        //             TextField(
+        //               controller: catatan,
+        //               decoration: InputDecoration(
+        //               border: OutlineInputBorder(),
+        //               labelText: 'Catatan',
+        //             ),
+        //           onChanged: (text) {}),
+        //         ],
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        // ),
+        
+            Container(
+              margin: EdgeInsets.all(20),
               child: TextField(
-            controller: nilaisurvei4,
-            style: TextStyle(fontSize: 24, color: Colors.black),
-          )),
-          Container(
+                  controller: catatan,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Catatan',
+                  ),
+                  onChanged: (text) {}),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: nama,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Nama',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: email,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: telepon,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Nomor Telepon',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: alamat,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Alamat Lengkap',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            Container(
             margin: EdgeInsets.all(20),
             child: ElevatedButton(
-                child: const Text('Ke Halaman Lima'),
+                child: Icon(Icons.mail),
+                // backgroundColor: Colors.purple[300],
                 onPressed: () {
-                  if (nilaisurvei4.text == "y") {
-                    nilai = int.parse(kirim) + 20;
-                  } else {
-                    nilai = int.parse(kirim);
-                  }
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>
-                          HalamanHasil(kirim: nilai.toString())));
+                      builder: (context) => HalamanHasil( kirim: nilai.toString(),
+                          catatan: catatan.text, nama: nama.text, email: email.text, telepon: telepon.text, alamat: alamat.text)));
                 }),
           ),
-        ])));
+          ])
+        )
+        );
   }
 }

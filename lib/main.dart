@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'pages/halaman_home.dart';
 
+  TextEditingController catatan = TextEditingController();
+  TextEditingController nama = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController telepon = TextEditingController();
+  TextEditingController alamat = TextEditingController();
+
 TextEditingController nilaisurvei = TextEditingController();
 TextEditingController nilaisurvei2 = TextEditingController();
 

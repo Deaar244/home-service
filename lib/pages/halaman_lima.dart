@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HalamanHasil extends StatelessWidget {
-  String kirim;
-  HalamanHasil({Key? key, required this.kirim}) : super(key: key);
+  String kirim, catatan, nama, email, telepon, alamat;
+  HalamanHasil({Key? key, required this.kirim, required this.catatan, required this.nama, required this.email, required this.telepon, required this.alamat}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
