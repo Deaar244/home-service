@@ -74,6 +74,12 @@
 
 import 'package:flutter/material.dart';
 
+  TextEditingController catatan = TextEditingController();
+  TextEditingController nama = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController telepon = TextEditingController();
+  TextEditingController alamat = TextEditingController();
+
 TextEditingController nilaisurvei = TextEditingController();
 TextEditingController nilaisurvei2 = TextEditingController();
 
@@ -252,40 +258,82 @@ class HalamanEmpat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Pertanyaan 4"),
+          title: const Text("Detail Kontak & Lokasi"),
+          backgroundColor: Colors.purple[300],
         ),
         body: Center(
-            child: Column(children: <Widget>[
-          Container(
-            child: Text("Apakah anda demam (y/t)?"),
-          ),
-          Container(
+              child: Column(children: <Widget>[
+            Container(
+              margin: EdgeInsets.all(20),
               child: TextField(
-            controller: nilaisurvei4,
-            style: TextStyle(fontSize: 24, color: Colors.black),
-          )),
-          Container(
+                  controller: catatan,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Catatan',
+                  ),
+                  onChanged: (text) {}),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: nama,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Nama',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: email,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: telepon,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Nomor Telepon',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: TextField(
+                  controller: alamat,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Alamat Lengkap',
+                  ),
+                  onChanged: (text) {  }),
+            ),
+            Container(
             margin: EdgeInsets.all(20),
             child: ElevatedButton(
-                child: const Text('Ke Halaman Lima'),
+                child: Icon(Icons.mail),
+                // backgroundColor: Colors.purple[300],
                 onPressed: () {
-                  if (nilaisurvei4.text == "y") {
-                    nilai = int.parse(kirim) + 20;
-                  } else {
-                    nilai = int.parse(kirim);
-                  }
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>
-                          HalamanLima(kirim: nilai.toString())));
+                      builder: (context) => HalamanLima( kirim: nilai.toString(),
+                          catatan: catatan.text, nama: nama.text, email: email.text, telepon: telepon.text, alamat: alamat.text)));
                 }),
           ),
-        ])));
+          ])
+        )
+        );
   }
 }
 
 class HalamanLima extends StatelessWidget {
-  String kirim;
-  HalamanLima({Key? key, required this.kirim}) : super(key: key);
+  String kirim, catatan, nama, email, telepon, alamat;
+  HalamanLima({Key? key, required this.kirim, required this.catatan, required this.nama, required this.email, required this.telepon, required this.alamat}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
