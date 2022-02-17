@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
 import '/pages/halaman_kedua.dart';
 
-TextEditingController nilaisurvei = TextEditingController();
-TextEditingController nilaisurvei2 = TextEditingController();
-
-TextEditingController nilaisurvei3 = TextEditingController();
-TextEditingController nilaisurvei4 = TextEditingController();
-TextEditingController nilaisurvei5 = TextEditingController();
 int nilai = 0;
 
 void main() {
   runApp(const MaterialApp(
     title: 'MetClean',
     home: HalamanSatu(),
-    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -36,7 +29,7 @@ class HalamanSatu extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 40),
           child: Center(
             child: Text(
-              'Cara mudah dan \nandal untuk merawat rumah Anda\n',
+              'Clean Home, Clean Life\n',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
@@ -49,7 +42,7 @@ class HalamanSatu extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 60),
         child: Center(
           child: Text(
-            'Kami menyediakan Anda dengan orang-orang terbaik untuk membantu mengurus rumah Anda.',
+            'Suasana tempat tinggal yang kotor bikin kamu jadi gak nyaman?\n Kru berpengalaman langsung dari kami, memastikan anda mendapatkan pelayanan terbaik.',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,
@@ -58,30 +51,13 @@ class HalamanSatu extends StatelessWidget {
           ),
         ),
       ),
-      Padding(
-          padding: EdgeInsets.all(50.0),
-          child: MaterialButton(
-            elevation: 0,
-            color: Colors.black,
-            onPressed: () {},
-            height: 55,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            child: Center(
-              child: Text(
-                'Mulai',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-          )),
       Container(
         margin: EdgeInsets.all(20),
+        height: 35,
+        width: 1300,
+        color: Colors.black,
         child: ElevatedButton(
-            child: const Text('Ke Halaman Dua'),
+            child: const Text('Pesan sekarang'),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => HalamanDua(kirim: nilai.toString())));
