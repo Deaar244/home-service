@@ -46,8 +46,8 @@ class HalamanHasil extends StatelessWidget {
                                   " %" +
                                   "gejala Omicron berdasarkan info yang ada")),
                           SizedBox(
-                            width: 15,
-                            height: 10,
+                            width: 20,
+                            height: 20,
                           ),
                         ],
                       )
@@ -55,7 +55,6 @@ class HalamanHasil extends StatelessWidget {
                   ),
                 )),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "dea apriliani r",
@@ -70,13 +69,11 @@ class HalamanHasil extends StatelessWidget {
                 ),
                 Text(
                   "089661946495",
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.7), fontSize: 18),
+                  style: TextStyle(color: Colors.black, fontSize: 18),
                 ),
                 Text(
                   "Margaasih",
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.7), fontSize: 18),
+                  style: TextStyle(color: Colors.black, fontSize: 18),
                 ),
               ],
             ),

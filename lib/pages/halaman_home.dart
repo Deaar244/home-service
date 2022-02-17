@@ -19,14 +19,14 @@ class HalamanSatu extends StatelessWidget {
         body: Column(children: [
       new Image.network(
           'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-          width: 250,
-          height: 250,
+          width: 200,
+          height: 200,
           fit: BoxFit.cover),
       SizedBox(
         height: 50,
       ),
       Container(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Center(
             child: Text(
               'Clean Home, Clean Life\n',
@@ -39,7 +39,7 @@ class HalamanSatu extends StatelessWidget {
             ),
           )),
       Container(
-        padding: EdgeInsets.symmetric(horizontal: 60),
+        margin: EdgeInsets.all(20),
         child: Center(
           child: Text(
             'Suasana tempat tinggal yang kotor bikin kamu jadi gak nyaman?\n Kru berpengalaman langsung dari kami, memastikan anda mendapatkan pelayanan terbaik.',
@@ -52,10 +52,9 @@ class HalamanSatu extends StatelessWidget {
         ),
       ),
       Container(
-        margin: EdgeInsets.all(20),
+        margin: EdgeInsets.all(15),
         height: 35,
         width: 1300,
-        color: Colors.black,
         child: ElevatedButton(
             child: const Text('Pesan sekarang'),
             onPressed: () {
