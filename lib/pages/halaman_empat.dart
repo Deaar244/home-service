@@ -109,17 +109,6 @@ class HalamanEmpat extends StatelessWidget {
                 ),
                 onChanged: (text) {}),
           ),
-          //   Container(
-          //   margin: EdgeInsets.all(20),
-          //   child: ElevatedButton(
-          //       child: Icon(Icons.mail),
-          //       // backgroundColor: Colors.purple[300],
-          //       onPressed: () {
-          //         Navigator.of(context).push(MaterialPageRoute(
-          //             builder: (context) => HalamanHasil( kirim: nilai.toString(),
-          //                 catatan: catatan.text, nama: nama.text, email: email.text, telepon: telepon.text, alamat: alamat.text)));
-          //       }),
-          // ),
         ])));
   }
 }

@@ -30,12 +30,12 @@ class HalamanHasil extends StatelessWidget {
         body: Center(
             child: Column(
           children: <Widget>[
-            Container(child: Text("")),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
-                  height: 200,
+                  width: 500,
+                  height: 65,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
@@ -48,26 +48,34 @@ class HalamanHasil extends StatelessWidget {
                     ],
                   ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ClipRRect(
-                              borderRadius: BorderRadius.circular(15.0),
-                              child: Text("Hasilnya adalah anda memiliki \n " +
-                                  kirim +
-                                  " %" +
-                                  "gejala Omicron berdasarkan info yang ada")),
-                          SizedBox(
-                            width: 20,
-                            height: 20,
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              'Nama : $nama',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            ),
                           ),
                         ],
                       )
                     ],
                   ),
                 )),
+            Container(
+              margin: EdgeInsets.all(10),
+              child: Text(
+                'Email : $email',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
+              ),
+            ),
             Column(
               children: [
                 Text(
@@ -119,17 +127,17 @@ class HalamanHasil extends StatelessWidget {
               ],
             ),
             Container(
-              margin: EdgeInsets.all(20),
-              height: 50,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(15.0)),
-              child: Center(
-                  child: Text(
-                'Pesan Sekarang',
-                style: TextStyle(color: Colors.white, fontSize: 18),
-              )),
-            ),
+              margin: EdgeInsets.all(15),
+              height: 35,
+              width: 1300,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue, // background
+                    onPrimary: Colors.white, // foreground
+                  ),
+                  child: const Text('Pesan sekarang'),
+                  onPressed: () {}),
+            )
           ],
         )));
   }
