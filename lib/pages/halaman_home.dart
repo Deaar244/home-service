@@ -20,14 +20,14 @@ class HalamanSatu extends StatelessWidget {
         body: Column(children: [
       new Image.network(
           'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-          width: 250,
-          height: 250,
+          width: 200,
+          height: 200,
           fit: BoxFit.cover),
       SizedBox(
         height: 50,
       ),
       Container(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Center(
             child: Text(
               'Clean Home, Clean Life\n',
@@ -41,7 +41,7 @@ class HalamanSatu extends StatelessWidget {
             ),
           )),
       Container(
-        padding: EdgeInsets.symmetric(horizontal: 60),
+        margin: EdgeInsets.all(20),
         child: Center(
           child: Text(
             'Suasana tempat tinggal yang kotor bikin kamu jadi gak nyaman?\n Kru berpengalaman langsung dari kami, memastikan anda mendapatkan pelayanan terbaik.',
@@ -55,20 +55,15 @@ class HalamanSatu extends StatelessWidget {
         ),
       ),
       Container(
-        margin: EdgeInsets.all(20),
-        width: 1500,
+        margin: EdgeInsets.all(15),
         height: 35,
-        child: RaisedButton(
-            color: Colors.black,
-            elevation: 6.0,
-            child: Text(
-              "Pesan Sekarang",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18.0,
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w700),
+        width: 1300,
+        child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.black,
+              onPrimary: Colors.white,
             ),
+            child: const Text('Pesan sekarang'),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => HalamanDua(kirim: nilai.toString())));
