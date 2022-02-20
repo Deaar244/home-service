@@ -17,44 +17,9 @@ class HalamanTiga extends StatelessWidget {
         ),
         body: Center(
             child: Column(children: <Widget>[
-          Padding(
-              padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 50),
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                width: 500,
-                height: 35,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade200,
-                      offset: Offset(0, 4),
-                      blurRadius: 10.0,
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                            borderRadius: BorderRadius.circular(15.0),
-                            child: Text("Hasilnya adalah anda memiliki \n " +
-                                kirim +
-                                " %" +
-                                "gejala Omicron berdasarkan info yang ada")),
-                        SizedBox(
-                          width: 15,
-                          height: 10,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              )),
+          Container(
+            child: Text("Apakah hidung anda tersumbat (y/t)?"),
+          ),
           Container(
               child: TextField(
             controller: nilaisurvei3,

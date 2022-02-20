@@ -16,6 +16,7 @@ class HalamanSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        //backgroundColor: Colors.purple[300],
         body: Column(children: [
       new Image.network(
           'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
@@ -32,9 +33,10 @@ class HalamanSatu extends StatelessWidget {
               'Clean Home, Clean Life\n',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 24,
+                fontStyle: FontStyle.normal,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: Colors.grey.shade900,
+                color: Colors.black,
               ),
             ),
           )),
@@ -45,8 +47,9 @@ class HalamanSatu extends StatelessWidget {
             'Suasana tempat tinggal yang kotor bikin kamu jadi gak nyaman?\n Kru berpengalaman langsung dari kami, memastikan anda mendapatkan pelayanan terbaik.',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 16,
-              color: Colors.grey.shade600,
+              fontStyle: FontStyle.normal,
+              fontSize: 14,
+              color: Colors.grey[400],
             ),
           ),
         ),
@@ -62,8 +65,8 @@ class HalamanSatu extends StatelessWidget {
               "Pesan Sekarang",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20.0,
-                  fontFamily: 'Italic',
+                  fontSize: 18.0,
+                  fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w700),
             ),
             onPressed: () {
