@@ -56,6 +56,10 @@ class HalamanSatu extends StatelessWidget {
         height: 35,
         width: 1300,
         child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.black, // background
+              onPrimary: Colors.white, // foreground
+            ),
             child: const Text('Pesan sekarang'),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(

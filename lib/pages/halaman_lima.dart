@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 
 class HalamanHasil extends StatelessWidget {
-  String kirim, catatan, nama, email, telepon, alamat;
-  HalamanHasil({Key? key, required this.kirim, required this.catatan, required this.nama, required this.email, required this.telepon, required this.alamat}) : super(key: key);
+  String kirim;
+  String catatan;
+  String nama;
+  String email;
+  String telepon;
+  String alamat;
+
+  HalamanHasil(
+      {Key? key,
+      required this.kirim,
+      required this.catatan,
+      required this.nama,
+      required this.email,
+      required this.telepon,
+      required this.alamat})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,24 +71,51 @@ class HalamanHasil extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  "dea apriliani r",
+                  'Catatan : $catatan',
+                ),
+                Text(
+                  'Nama : $nama',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
                   ),
                 ),
-                SizedBox(
-                  height: 5,
-                  width: 15,
+                Text(
+                  'Email : $email',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
                 ),
                 Text(
-                  "089661946495",
-                  style: TextStyle(color: Colors.black, fontSize: 18),
+                  'Telepon : $telepon',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
                 ),
                 Text(
-                  "Margaasih",
-                  style: TextStyle(color: Colors.black, fontSize: 18),
+                  'Alamat : $alamat',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
                 ),
+                // Column(
+                //   children: [
+                //     child: TextField(
+                //     Text(
+                //       "dea apriliani r",
+                //       style: TextStyle(
+                //         color: Colors.black,
+                //         fontSize: 18,
+                //       ),
+                //     ),
+                //     )
+                // SizedBox(
+                //   height: 5,
+                //   width: 15,
+                // ),
               ],
             ),
             Container(
