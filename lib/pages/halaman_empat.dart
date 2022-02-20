@@ -9,7 +9,7 @@ class HalamanEmpat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("MetClean"),
+          title: const Text("Detail Kontak & Lokasi"),
           backgroundColor: Colors.purple[300],
           actions: <Widget>[
             IconButton(icon: Icon(Icons.account_circle), onPressed: () {}),
@@ -29,7 +29,7 @@ class HalamanEmpat extends StatelessWidget {
         //             Expanded(child: new Text("Catatan", style: TextStyle(color: Colors.black12),)),
         //             TextField(
         //               controller: catatan,
-        //               decoration: InputDecoration(
+        //               decorati on: InputDecoration(
         //               border: OutlineInputBorder(),
         //               labelText: 'Catatan',
         //             ),
@@ -40,9 +40,9 @@ class HalamanEmpat extends StatelessWidget {
         //   ),
         // ),
         // ),
-        
+            Icon(Icons.people, color: Colors.deepPurple, size: 40,),
             Container(
-              margin: EdgeInsets.all(20),
+              margin: EdgeInsets.all(10),
               child: TextField(
                   controller: catatan,
                   decoration: InputDecoration(
@@ -52,7 +52,7 @@ class HalamanEmpat extends StatelessWidget {
                   onChanged: (text) {}),
             ),
             Container(
-              margin: EdgeInsets.all(20),
+              margin: EdgeInsets.all(10),
               child: TextField(
                   controller: nama,
                   decoration: InputDecoration(
@@ -62,7 +62,7 @@ class HalamanEmpat extends StatelessWidget {
                   onChanged: (text) {  }),
             ),
             Container(
-              margin: EdgeInsets.all(20),
+              margin: EdgeInsets.all(10),
               child: TextField(
                   controller: email,
                   decoration: InputDecoration(
@@ -73,7 +73,7 @@ class HalamanEmpat extends StatelessWidget {
             ),
             
             Container(
-              margin: EdgeInsets.all(20),
+              margin: EdgeInsets.all(10),
               child: TextField(
                   controller: telepon,
                   decoration: InputDecoration(
@@ -83,7 +83,7 @@ class HalamanEmpat extends StatelessWidget {
                   onChanged: (text) {  }),
             ),
             Container(
-              margin: EdgeInsets.all(20),
+              margin: EdgeInsets.all(10),
               child: TextField(
                   controller: alamat,
                   decoration: InputDecoration(
@@ -93,7 +93,7 @@ class HalamanEmpat extends StatelessWidget {
                   onChanged: (text) {  }),
             ),
             Container(
-            margin: EdgeInsets.all(20),
+            margin: EdgeInsets.all(10),
             child: ElevatedButton(
                 child: Icon(Icons.mail),
                 // backgroundColor: Colors.purple[300],
