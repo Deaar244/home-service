@@ -65,7 +65,7 @@ class HalamanSatu extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => HalamanDua(kirim: nilai.toString())));
             }),
-      ),
+      )
     ]));
   }
 }

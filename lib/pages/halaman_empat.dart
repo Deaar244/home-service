@@ -11,6 +11,7 @@ class HalamanEmpat extends StatelessWidget {
         appBar: AppBar(
           title: const Text("MetClean"),
           backgroundColor: Colors.purple[300],
+          elevation: 6.0,
           actions: <Widget>[
             IconButton(icon: Icon(Icons.account_circle), onPressed: () {}),
           ],
