@@ -16,59 +16,76 @@ class HalamanSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //backgroundColor: Colors.purple[300],
+        backgroundColor: Colors.purple[300],
         body: Column(children: [
-      new Image.network(
-          'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-          width: 200,
-          height: 200,
-          fit: BoxFit.cover),
-      SizedBox(
-        height: 50,
-      ),
-      Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Center(
-            child: Text(
-              'Clean Home Clean Life\n',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontStyle: FontStyle.normal,
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
+          Container(
+              width: 200,
+              height: 200,
+              margin: EdgeInsets.only(top: 40),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png'),
+                    fit: BoxFit.cover),
+              )),
+          // backgroundColor: Colors.purple[300],
+          // Column(children: [
+          //   new Image.network(
+          //       'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
+          //       width: 200,
+          //       height: 200,
+          //       fit: BoxFit.cover),
+          //   SizedBox(
+          //     height: 50,
+          //   ),
+          Container(
+              width: 500,
+              height: 50,
+              margin: EdgeInsets.only(top: 10),
+              child: Center(
+                child: Text(
+                  'Clean Home Clean Life\n',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontStyle: FontStyle.normal,
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              )),
+          Container(
+            width: 500,
+            height: 50,
+            margin: EdgeInsets.only(top: 10),
+            child: Center(
+              child: Text(
+                'Suasana tempat tinggal yang kotor bikin kamu jadi gak nyaman?\n Kru berpengalaman langsung dari kami, memastikan anda \n mendapatkan pelayanan terbaik.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontStyle: FontStyle.normal,
+                  fontSize: 14,
+                  color: Colors.grey[900],
+                ),
               ),
             ),
-          )),
-      Container(
-        margin: EdgeInsets.all(20),
-        child: Center(
-          child: Text(
-            'Suasana tempat tinggal yang kotor bikin kamu jadi gak nyaman?\n Kru berpengalaman langsung dari kami, memastikan anda mendapatkan pelayanan terbaik.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontStyle: FontStyle.normal,
-              fontSize: 14,
-              color: Colors.grey[900],
-            ),
           ),
-        ),
-      ),
-      Container(
-        margin: EdgeInsets.all(15),
-        height: 35,
-        width: 1300,
-        child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.black,
-              onPrimary: Colors.white,
-            ),
-            child: const Text('Pesan sekarang'),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => HalamanDua(kirim: nilai.toString())));
-            }),
-      )
-    ]));
+          Container(
+            margin: EdgeInsets.all(20),
+            height: 35,
+            width: 1300,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                  onPrimary: Colors.white,
+                ),
+                child: const Text('Pesan sekarang'),
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          HalamanDua(kirim: nilai.toString())));
+                }),
+          )
+        ]));
   }
 }
