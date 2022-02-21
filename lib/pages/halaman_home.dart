@@ -53,16 +53,24 @@ class HalamanSatu extends StatelessWidget {
       ),
       Container(
         margin: EdgeInsets.all(20),
+        width: 1500,
         height: 35,
-        width: 1300,
-        color: Colors.black,
-        child: ElevatedButton(
-            child: const Text('Pesan sekarang'),
+        child: RaisedButton(
+            color: Colors.black,
+            elevation: 6.0,
+            child: Text(
+              "Pesan Sekarang",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontFamily: 'Italic',
+                  fontWeight: FontWeight.w700),
+            ),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => HalamanDua(kirim: nilai.toString())));
             }),
-      ),
+      )
     ]));
   }
 }
