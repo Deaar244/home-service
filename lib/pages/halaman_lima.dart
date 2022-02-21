@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HalamanHasil extends StatelessWidget {
-  String kirim, catatan, nama, email, telepon, alamat;
+  String kirim;
+  String catatan;
+  String nama;
+  String email;
+  String telepon;
+  String alamat;
+
   HalamanHasil(
       {Key? key,
       required this.kirim,
@@ -24,12 +30,12 @@ class HalamanHasil extends StatelessWidget {
         body: Center(
             child: Column(
           children: <Widget>[
-            Container(child: Text("")),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
-                  height: 200,
+                  width: 500,
+                  height: 65,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
@@ -42,64 +48,96 @@ class HalamanHasil extends StatelessWidget {
                     ],
                   ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ClipRRect(
-                              borderRadius: BorderRadius.circular(15.0),
-                              child: Text("Hasilnya adalah anda memiliki \n " +
-                                  kirim +
-                                  " %" +
-                                  "gejala Omicron berdasarkan info yang ada")),
-                          SizedBox(
-                            width: 15,
-                            height: 10,
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              'Nama : $nama',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            ),
                           ),
                         ],
                       )
                     ],
                   ),
                 )),
+            Container(
+              margin: EdgeInsets.all(10),
+              child: Text(
+                'Email : $email',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
+              ),
+            ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "dea apriliani r",
+                  'Catatan : $catatan',
+                ),
+                Text(
+                  'Nama : $nama',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
                   ),
                 ),
-                SizedBox(
-                  height: 5,
-                  width: 15,
+                Text(
+                  'Email : $email',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
                 ),
                 Text(
-                  "089661946495",
+                  'Telepon : $telepon',
                   style: TextStyle(
-                      color: Colors.black.withOpacity(0.7), fontSize: 18),
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
                 ),
                 Text(
-                  "Margaasih",
+                  'Alamat : $alamat',
                   style: TextStyle(
-                      color: Colors.black.withOpacity(0.7), fontSize: 18),
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
                 ),
+                // Column(
+                //   children: [
+                //     child: TextField(
+                //     Text(
+                //       "dea apriliani r",
+                //       style: TextStyle(
+                //         color: Colors.black,
+                //         fontSize: 18,
+                //       ),
+                //     ),
+                //     )
+                // SizedBox(
+                //   height: 5,
+                //   width: 15,
+                // ),
               ],
             ),
             Container(
-              margin: EdgeInsets.all(20),
-              height: 50,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(15.0)),
-              child: Center(
-                  child: Text(
-                'Pesan Sekarang',
-                style: TextStyle(color: Colors.white, fontSize: 18),
-              )),
-            ),
+              margin: EdgeInsets.all(15),
+              height: 35,
+              width: 1300,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue, // background
+                    onPrimary: Colors.white, // foreground
+                  ),
+                  child: const Text('Pesan sekarang'),
+                  onPressed: () {}),
+            )
           ],
         )));
   }

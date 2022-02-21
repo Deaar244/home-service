@@ -16,6 +16,23 @@ class HalamanEmpat extends StatelessWidget {
             IconButton(icon: Icon(Icons.account_circle), onPressed: () {}),
           ],
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => HalamanHasil(
+                    kirim: nilai.toString(),
+                    catatan: catatan.text,
+                    nama: nama.text,
+                    email: email.text,
+                    telepon: telepon.text,
+                    alamat: alamat.text)));
+          },
+          backgroundColor: Colors.blue,
+          child: const Icon(
+            Icons.arrow_forward_ios,
+            size: 20,
+          ),
+        ),
         body: Center(
             child: Column(children: <Widget>[
           // Card(
@@ -91,22 +108,6 @@ class HalamanEmpat extends StatelessWidget {
                   labelText: 'Alamat Lengkap',
                 ),
                 onChanged: (text) {}),
-          ),
-          Container(
-            margin: EdgeInsets.all(20),
-            child: ElevatedButton(
-                child: Icon(Icons.mail),
-                // backgroundColor: Colors.purple[300],
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => HalamanHasil(
-                          kirim: nilai.toString(),
-                          catatan: catatan.text,
-                          nama: nama.text,
-                          email: email.text,
-                          telepon: telepon.text,
-                          alamat: alamat.text)));
-                }),
           ),
         ])));
   }

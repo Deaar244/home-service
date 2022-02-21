@@ -16,56 +16,54 @@ class HalamanSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        //backgroundColor: Colors.purple[300],
         body: Column(children: [
       new Image.network(
           'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-          width: 250,
-          height: 250,
+          width: 200,
+          height: 200,
           fit: BoxFit.cover),
       SizedBox(
         height: 50,
       ),
       Container(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Center(
             child: Text(
               'Clean Home, Clean Life\n',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 24,
+                fontStyle: FontStyle.normal,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: Colors.grey.shade900,
+                color: Colors.black,
               ),
             ),
           )),
       Container(
-        padding: EdgeInsets.symmetric(horizontal: 60),
+        margin: EdgeInsets.all(20),
         child: Center(
           child: Text(
             'Suasana tempat tinggal yang kotor bikin kamu jadi gak nyaman?\n Kru berpengalaman langsung dari kami, memastikan anda mendapatkan pelayanan terbaik.',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 16,
-              color: Colors.grey.shade600,
+              fontStyle: FontStyle.normal,
+              fontSize: 14,
+              color: Colors.grey[400],
             ),
           ),
         ),
       ),
       Container(
-        margin: EdgeInsets.all(20),
-        width: 1500,
+        margin: EdgeInsets.all(15),
         height: 35,
-        child: RaisedButton(
-            color: Colors.black,
-            elevation: 6.0,
-            child: Text(
-              "Pesan Sekarang",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                  fontFamily: 'Italic',
-                  fontWeight: FontWeight.w700),
+        width: 1300,
+        child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.black,
+              onPrimary: Colors.white,
             ),
+            child: const Text('Pesan sekarang'),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => HalamanDua(kirim: nilai.toString())));
