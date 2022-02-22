@@ -14,11 +14,12 @@ class _HalamanDuaState extends State<HalamanDua> {
   TextEditingController kamar = TextEditingController();
   TextEditingController wc = TextEditingController();
   TextEditingController dapur = TextEditingController();
-  int harga = 0;
-  int a = 0;
-  int b = 0;
-  int c = 0;
-  int d = 0;
+  TextEditingController total = TextEditingController();
+  int harga = 150000;
+  // String a = "";
+  // String b = "";
+  // String c = "";
+  // String d = "";
 
   @override
   Widget build(BuildContext context) {
@@ -103,11 +104,24 @@ class _HalamanDuaState extends State<HalamanDua> {
                   ),
                   child: const Text('Total'),
                   onPressed: () {
+                    // int harga = "150000";
+                    int a = int.parse(rtengah.text);
+                    int b = int.parse(kamar.text);
+                    int c = int.parse(wc.text);
+                    int d = int.parse(dapur.text);
+                    int ruang = harga * a;
+                    int kmr = harga * b; 
+                    int kmrmandi = harga * c;
+                    int dpr = harga * d;
+
+                    int ttlsemua = ruang + kmr + kmrmandi + dpr;
+                    total.text = ttlsemua.toString(); 
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) =>
-                            HalamanTiga(kirim: harga.toString())));
+                            HalamanTiga(kirim: ttlsemua.toString())));
                   }),
             ),
+          
           ]))),
     );
   }
@@ -115,20 +129,20 @@ class _HalamanDuaState extends State<HalamanDua> {
 
 //test doang
 
-class HalamanHasil extends StatelessWidget {
-  String kirim;
-  HalamanHasil({Key? key, required this.kirim}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text("Total Harga"),
-        ),
-        body: Center(
-            child: Column(children: <Widget>[
-          Container(
-            child: Text("Total pembayaran anda" + kirim + ".00 Rp"),
-          ),
-        ])));
-  }
-}
+// class HalamanHasil extends StatelessWidget {
+//   String kirim;
+//   HalamanHasil({Key? key, required this.kirim}) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Total Harga"),
+//         ),
+//         body: Center(
+//             child: Column(children: <Widget>[
+//           Container(
+//             child: Text("Total pembayaran anda" + kirim + ".00 Rp"),
+//           ),
+//         ])));
+//   }
+// }

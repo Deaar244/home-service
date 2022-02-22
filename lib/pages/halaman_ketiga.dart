@@ -102,6 +102,9 @@ import 'package:table_calendar/table_calendar.dart';
 //   }
 // }
 
+  TextEditingController total = TextEditingController();
+
+
 class HalamanTiga extends StatelessWidget {
   String kirim;
   HalamanTiga({Key? key, required this.kirim}) : super(key: key);
@@ -125,6 +128,16 @@ class HalamanTiga extends StatelessWidget {
             controller: nilaisurvei2,
             style: TextStyle(fontSize: 24, color: Colors.white),
           )),
+            Container(
+            margin: EdgeInsets.all(20),
+            child: TextField(
+                controller: total,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Total',
+                ),
+                onChanged: (text) {}),
+          ),
           Container(
             margin: EdgeInsets.all(20),
             child: ElevatedButton(
