@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '/pages/halaman_kedua.dart';
 
-int nilai = 0;
+int ttl = 0;
 
 void main() {
   runApp(const MaterialApp(
@@ -19,8 +19,22 @@ class HalamanSatu extends StatelessWidget {
         backgroundColor: Colors.purple[200],
         body: Column(children: [
           Container(
-              width: 200,
-              height: 200,
+            width: 500,
+            height: 50,
+            margin: EdgeInsets.only(top: 30),
+            child: Text(
+              'MetClean',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontStyle: FontStyle.normal,
+                fontSize: 30,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          Container(
+              width: 300,
+              height: 300,
               margin: EdgeInsets.only(top: 40),
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -28,16 +42,6 @@ class HalamanSatu extends StatelessWidget {
                         'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png'),
                     fit: BoxFit.cover),
               )),
-          // backgroundColor: Colors.purple[300],
-          // Column(children: [
-          //   new Image.network(
-          //       'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-          //       width: 200,
-          //       height: 200,
-          //       fit: BoxFit.cover),
-          //   SizedBox(
-          //     height: 50,
-          //   ),
           Container(
               width: 500,
               height: 50,
@@ -82,10 +86,25 @@ class HalamanSatu extends StatelessWidget {
                 child: const Text('Pesan sekarang'),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>
-                          HalamanDua(kirim: nilai.toString())));
+                      builder: (context) => HalamanDua(
+                            ttl: ttl.toString(),
+                          )));
                 }),
-          )
+          ),
+          Container(
+            width: 500,
+            height: 50,
+            margin: EdgeInsets.only(right: 30),
+            child: Text(
+              '*Jangan khawatir, vendor kami 80% telah divaksin, menggunakan masker, rajin mencuci tangan, dan \n selalu menyediakan sanitasi peralatan',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontStyle: FontStyle.normal,
+                fontSize: 10,
+                color: Colors.grey[900],
+              ),
+            ),
+          ),
         ]));
   }
 }
