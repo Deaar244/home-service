@@ -97,7 +97,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
@@ -111,7 +111,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),

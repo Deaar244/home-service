@@ -11,11 +11,12 @@ TextEditingController rtengah = TextEditingController();
 TextEditingController kamar = TextEditingController();
 TextEditingController wc = TextEditingController();
 TextEditingController dapur = TextEditingController();
-int harga = 0;
+int harga = 150000;
 int a = 0;
 int b = 0;
 int c = 0;
 int d = 0;
+TextEditingController total = TextEditingController();
 
 TextEditingController nilaisurvei = TextEditingController();
 TextEditingController nilaisurvei2 = TextEditingController();

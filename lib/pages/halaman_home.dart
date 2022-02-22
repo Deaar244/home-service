@@ -16,7 +16,7 @@ class HalamanSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purple[200],
+        backgroundColor: Colors.purple[300],
         body: Column(children: [
           Container(
             width: 500,
@@ -28,13 +28,14 @@ class HalamanSatu extends StatelessWidget {
               style: TextStyle(
                 fontStyle: FontStyle.normal,
                 fontSize: 30,
+                fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
             ),
           ),
           Container(
-              width: 300,
-              height: 300,
+              width: 200,
+              height: 200,
               margin: EdgeInsets.only(top: 40),
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -101,7 +102,7 @@ class HalamanSatu extends StatelessWidget {
               style: TextStyle(
                 fontStyle: FontStyle.normal,
                 fontSize: 10,
-                color: Colors.grey[900],
+                color: Colors.black,
               ),
             ),
           ),
