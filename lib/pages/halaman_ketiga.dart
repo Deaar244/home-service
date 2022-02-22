@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:home_cleaning/pages/halaman_kedua.dart';
 import '/main.dart';
 import '/pages/halaman_empat.dart';
 import 'package:table_calendar/table_calendar.dart';
-
 import 'package:flutter/material.dart';
 
 class HalamanTiga extends StatefulWidget {
-  HalamanTiga({Key? key, required this.kirim}) : super(key: key);
-  String kirim;
+  final HalamanDua data;
+
+  HalamanTiga({required this.data});
+
+  // String kirim, kirim2;
+  // HalamanTiga({Key? key, required this.kirim, required this.kirim2}) : super(key: key);
 
   @override
   State<HalamanTiga> createState() => _HalamanTigaState();
@@ -81,13 +85,48 @@ class _HalamanTigaState extends State<HalamanTiga> {
                 titleCentered: true,
               ),
             ),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 30),
+                    // child: Text('Tanggal : ' + focusedDay.toString()),
+                    child: Text(
+                      'Tanggal : ' + focusedDay.toString(),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontStyle: FontStyle.normal,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    // child: Text('Total : ' + widget.data.ttl),
+                    margin: EdgeInsets.only(top: 30),
+                    child: Text(
+                      ' | Total : ' + widget.data.ttl,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontStyle: FontStyle.normal,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
             Center(
               child: Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.all(20),
+                    margin: EdgeInsets.all(40),
                     height: 35,
-                    width: 100,
+                    width: 150,
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           primary: Colors.purple[300],
