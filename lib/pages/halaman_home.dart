@@ -30,7 +30,7 @@ class HalamanSatu extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Center(
             child: Text(
-              'Clean Home, Clean Life\n',
+              'Clean Home Clean Life\n',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontStyle: FontStyle.normal,
@@ -49,7 +49,7 @@ class HalamanSatu extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.normal,
               fontSize: 14,
-              color: Colors.grey[400],
+              color: Colors.grey[900],
             ),
           ),
         ),

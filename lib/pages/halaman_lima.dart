@@ -66,49 +66,194 @@ class HalamanHasil extends StatelessWidget {
                     ],
                   ),
                 )),
-            Container(
-              margin: EdgeInsets.all(10),
-              child: Text(
-                'Email : $email',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                ),
-              ),
-            ),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  width: 500,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(0, 4),
+                        blurRadius: 10.0,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              'Email : $email',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  width: 500,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(0, 4),
+                        blurRadius: 10.0,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              'Telepon : $telepon',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  width: 500,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(0, 4),
+                        blurRadius: 10.0,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              'Alamat : $alamat',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  width: 500,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(0, 4),
+                        blurRadius: 10.0,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              'Catatan : $catatan',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+
+            // Container(
+            //   margin: EdgeInsets.all(10),
+            //   child: Text(
+            //     'Email : $email',
+            //     style: TextStyle(
+            //       color: Colors.black,
+            //       fontSize: 18,
+            //     ),
+            //   ),
+            // ),
             Column(
               children: [
-                Text(
-                  'Catatan : $catatan',
-                ),
-                Text(
-                  'Nama : $nama',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                Text(
-                  'Email : $email',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                Text(
-                  'Telepon : $telepon',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                Text(
-                  'Alamat : $alamat',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
+                // Text(
+                //   'Catatan : $catatan',
+                // ),
+                // Text(
+                //   'Nama : $nama',
+                //   style: TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 18,
+                //   ),
+                // ),
+                // Text(
+                //   'Email : $email',
+                //   style: TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 18,
+                //   ),
+                // ),
+                // Text(
+                //   'Telepon : $telepon',
+                //   style: TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 18,
+                //   ),
+                // ),
+                // Text(
+                //   'Alamat : $alamat',
+                //   style: TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 18,
+                //   ),
+                // ),
                 // Column(
                 //   children: [
                 //     child: TextField(
@@ -128,8 +273,8 @@ class HalamanHasil extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.all(15),
-              height: 35,
-              width: 1300,
+              height: 30,
+              width: 400,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.blue, // background
