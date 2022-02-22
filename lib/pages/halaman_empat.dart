@@ -27,7 +27,7 @@ class HalamanEmpat extends StatelessWidget {
                     telepon: telepon.text,
                     alamat: alamat.text)));
           },
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.purple[300],
           child: const Icon(
             Icons.arrow_forward_ios,
             size: 20,
