@@ -2,43 +2,128 @@ import 'package:flutter/material.dart';
 import '/main.dart';
 import '/pages/halaman_ketiga.dart';
 
-class HalamanDua extends StatelessWidget {
+class HalamanDua extends StatefulWidget {
   String kirim;
   HalamanDua({Key? key, required this.kirim}) : super(key: key);
+  @override
+  _HalamanDuaState createState() => _HalamanDuaState();
+}
+
+class _HalamanDuaState extends State<HalamanDua> {
+  TextEditingController rtengah = TextEditingController();
+  TextEditingController kamar = TextEditingController();
+  TextEditingController wc = TextEditingController();
+  TextEditingController dapur = TextEditingController();
+  int harga = 0;
+  int a = 0;
+  int b = 0;
+  int c = 0;
+  int d = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Ruangan mana yang akan kami bersihkan?'),
+            backgroundColor: Colors.purple[300],
+            actions: <Widget>[
+              IconButton(icon: Icon(Icons.account_circle), onPressed: () {}),
+            ],
+          ),
+          body: Center(
+              child: Column(children: <Widget>[
+            new Image.network(
+                'https://img.icons8.com/officel/2x/living-room.png',
+                width: 30,
+                height: 30,
+                fit: BoxFit.cover),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              child: TextField(
+                  controller: rtengah,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText:
+                        'Masukan jumlah Ruang utama yang akan dibersihkan ',
+                  ),
+                  onChanged: (text) {}),
+            ),
+            new Image.network('https://img.icons8.com/fluency/2x/bedroom.png',
+                width: 30, height: 30, fit: BoxFit.cover),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              child: TextField(
+                  controller: kamar,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText:
+                        'Masukan jumlah kamar tidur yang akan dibersihkan',
+                  ),
+                  onChanged: (text) {}),
+            ),
+            new Image.network('https://img.icons8.com/color/2x/bath.png',
+                width: 30, height: 30, fit: BoxFit.cover),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              child: TextField(
+                  controller: wc,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText:
+                        'Masukan jumlah kamar mandi yang akan dibersihkan',
+                  ),
+                  onChanged: (text) {}),
+            ),
+            new Image.network('https://img.icons8.com/dusk/2x/kitchen.png',
+                width: 30, height: 30, fit: BoxFit.cover),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              child: TextField(
+                  controller: dapur,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Masukan jumlah dapur yang akan dibersihkan',
+                  ),
+                  onChanged: (text) {}),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              height: 35,
+              width: 100,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.purple[300],
+                    onPrimary: Colors.white,
+                  ),
+                  child: const Text('Total'),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>
+                            HalamanTiga(kirim: harga.toString())));
+                  }),
+            ),
+          ]))),
+    );
+  }
+}
+
+//test doang
+
+class HalamanHasil extends StatelessWidget {
+  String kirim;
+  HalamanHasil({Key? key, required this.kirim}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("MetClean"),
-          backgroundColor: Colors.purple[300],
-          actions: <Widget>[
-            IconButton(icon: Icon(Icons.account_circle), onPressed: () {}),
-          ],
+          title: const Text("Total Harga"),
         ),
         body: Center(
             child: Column(children: <Widget>[
           Container(
-            child: Text("Apakah anda letih?"),
-          ),
-          Container(
-              child: TextField(
-            controller: nilaisurvei2,
-            style: TextStyle(fontSize: 24, color: Colors.black),
-          )),
-          Container(
-            margin: EdgeInsets.all(20),
-            child: ElevatedButton(
-                child: const Text('Ke Halaman Tiga'),
-                onPressed: () {
-                  if (nilaisurvei2.text == "y") {
-                    nilai = int.parse(kirim) + 20;
-                  } else {
-                    nilai = int.parse(kirim);
-                  }
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>
-                          HalamanTiga(kirim: nilai.toString())));
-                }),
+            child: Text("Total pembayaran anda" + kirim + ".00 Rp"),
           ),
         ])));
   }
