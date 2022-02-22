@@ -3,9 +3,18 @@ import '/main.dart';
 import '/pages/halaman_empat.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class HalamanTiga extends StatelessWidget {
+class HalamanTiga extends StatefulWidget {
   String kirim;
   HalamanTiga({Key? key, required this.kirim}) : super(key: key);
+
+  @override
+  State<HalamanTiga> createState() => _HalamanTigaState();
+}
+
+class _HalamanTigaState extends State<HalamanTiga> {
+  CalendarFormat format = CalendarFormat.month;
+  DateTime selectedDay = DateTime.now();
+  DateTime focusedDay = DateTime.now();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,39 +27,74 @@ class HalamanTiga extends StatelessWidget {
         ),
         body: Center(
             child: TableCalendar(
-          firstDay: DateTime.utc(2010, 10, 20),
-          lastDay: DateTime.utc(2040, 10, 20),
-          focusedDay: DateTime.now(),
+          firstDay: DateTime(2010),
+          lastDay: DateTime(2040),
+          focusedDay: selectedDay,
+          calendarFormat: format,
+          onFormatChanged: (CalendarFormat _format) {
+            setState(() {
+              format = _format;
+            });
+          },
+          startingDayOfWeek: StartingDayOfWeek.sunday,
+          daysOfWeekVisible: true,
+
+          //kodingan perubahan hari
+          onDaySelected: (DateTime selectDay, DateTime focusDay) {
+            setState(() {
+              selectedDay = selectDay;
+              focusedDay = focusDay;
+            });
+            print(focusedDay);
+          },
+          selectedDayPredicate: (DateTime date) {
+            return isSameDay(selectedDay, date);
+          },
+
+          //kodingan kostum kalender
           calendarStyle: CalendarStyle(
-              todayTextStyle: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold)),
-          //     child: Column(children: <Widget>[
-          //   Container(
-          //     child: Text("Apakah hidung anda tersumbat (y/t)?"),
-          //   ),
-          //   Container(
-          //       child: TextField(
-          //     controller: nilaisurvei3,
-          //     style: TextStyle(fontSize: 24, color: Colors.black),
-          //   )),
-          //   Container(
-          //     margin: EdgeInsets.all(20),
-          //     child: ElevatedButton(
-          //         child: const Text('Ke Halaman Empat'),
-          //         onPressed: () {
-          //           if (nilaisurvei3.text == "y") {
-          //             nilai = int.parse(kirim) + 20;
-          //           } else {
-          //             nilai = int.parse(kirim);
-          //           }
-          //           Navigator.of(context).push(MaterialPageRoute(
-          //               builder: (context) =>
-          //                   HalamanEmpat(kirim: nilai.toString())));
-          //         }),
-          //   ),
-          // ]
-        )));
+            isTodayHighlighted: true,
+            selectedDecoration: BoxDecoration(
+              color: Colors.deepPurple,
+              shape: BoxShape.circle,
+            ),
+            selectedTextStyle: TextStyle(
+                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+            todayDecoration: BoxDecoration(
+              color: Colors.purple.shade300,
+              shape: BoxShape.circle,
+            ),
+          ),
+          headerStyle: HeaderStyle(
+            formatButtonVisible: false,
+            titleCentered: true,
+          ),
+        )
+            //     child: Column(children: <Widget>[
+            //   Container(
+            //     child: Text("Apakah hidung anda tersumbat (y/t)?"),
+            //   ),
+            //   Container(
+            //       child: TextField(
+            //     controller: nilaisurvei3,
+            //     style: TextStyle(fontSize: 24, color: Colors.black),
+            //   )),
+            //   Container(
+            //     margin: EdgeInsets.all(20),
+            //     child: ElevatedButton(
+            //         child: const Text('Ke Halaman Empat'),
+            //         onPressed: () {
+            //           if (nilaisurvei3.text == "y") {
+            //             nilai = int.parse(kirim) + 20;
+            //           } else {
+            //             nilai = int.parse(kirim);
+            //           }
+            //           Navigator.of(context).push(MaterialPageRoute(
+            //               builder: (context) =>
+            //                   HalamanEmpat(kirim: nilai.toString())));
+            //         }),
+            //   ),
+            // ]
+            ));
   }
 }
