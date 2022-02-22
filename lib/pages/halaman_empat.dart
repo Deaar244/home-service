@@ -9,7 +9,7 @@ class HalamanEmpat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("MetClean"),
+          title: const Text("Detail Kontak & Lokasi"),
           backgroundColor: Colors.purple[300],
           elevation: 6.0,
           actions: <Widget>[
