@@ -31,7 +31,7 @@ class HalamanHasil extends StatelessWidget {
             child: Column(
           children: <Widget>[
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
                   width: 500,
@@ -67,7 +67,7 @@ class HalamanHasil extends StatelessWidget {
                   ),
                 )),
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
                   width: 500,
@@ -103,7 +103,7 @@ class HalamanHasil extends StatelessWidget {
                   ),
                 )),
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
                   width: 500,
@@ -139,7 +139,7 @@ class HalamanHasil extends StatelessWidget {
                   ),
                 )),
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
                   width: 500,
@@ -175,7 +175,7 @@ class HalamanHasil extends StatelessWidget {
                   ),
                 )),
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
                   width: 500,
