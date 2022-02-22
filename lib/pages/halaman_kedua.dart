@@ -39,6 +39,7 @@ class _HalamanDuaState extends State<HalamanDua> {
                 width: 30,
                 height: 30,
                 fit: BoxFit.cover),
+            new Text ('Ruang Utama'),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
               child: TextField(
@@ -46,12 +47,13 @@ class _HalamanDuaState extends State<HalamanDua> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText:
-                        'Masukan jumlah Ruang utama yang akan dibersihkan ',
+                        'Jumlah Ruang Utama yang akan dibersihkan',
                   ),
                   onChanged: (text) {}),
             ),
             new Image.network('https://img.icons8.com/fluency/2x/bedroom.png',
                 width: 30, height: 30, fit: BoxFit.cover),
+            new Text ('Kamar Tidur'),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
               child: TextField(
@@ -59,12 +61,13 @@ class _HalamanDuaState extends State<HalamanDua> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText:
-                        'Masukan jumlah kamar tidur yang akan dibersihkan',
+                        'Jumlah kamar yang akan dibersihkan',
                   ),
                   onChanged: (text) {}),
             ),
             new Image.network('https://img.icons8.com/color/2x/bath.png',
                 width: 30, height: 30, fit: BoxFit.cover),
+            new Text ('Kamar Mandi'),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
               child: TextField(
@@ -72,19 +75,20 @@ class _HalamanDuaState extends State<HalamanDua> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText:
-                        'Masukan jumlah kamar mandi yang akan dibersihkan',
+                        'Jumlah Kamar Mandi yang akan dibersihkan',
                   ),
                   onChanged: (text) {}),
             ),
             new Image.network('https://img.icons8.com/dusk/2x/kitchen.png',
                 width: 30, height: 30, fit: BoxFit.cover),
+            new Text ('Dapur'),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
               child: TextField(
                   controller: dapur,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Masukan jumlah dapur yang akan dibersihkan',
+                    labelText: 'jumlah dapur yang akan dibersihkan',
                   ),
                   onChanged: (text) {}),
             ),
