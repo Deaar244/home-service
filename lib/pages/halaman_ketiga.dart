@@ -118,12 +118,12 @@ class HalamanTiga extends StatelessWidget {
         body: Center(
             child: Column(children: <Widget>[
           Container(
-            child: Text("Apakah anda batuk atau pilek?"),
+            child: Text("Apakah anda sakit batuk atau pilek?"),
           ),
           Container(
               child: TextField(
             controller: nilaisurvei2,
-            style: TextStyle(fontSize: 24, color: Colors.black),
+            style: TextStyle(fontSize: 24, color: Colors.white),
           )),
           Container(
             margin: EdgeInsets.all(20),
