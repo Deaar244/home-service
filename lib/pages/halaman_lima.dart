@@ -272,13 +272,13 @@ class HalamanHasil extends StatelessWidget {
               ],
             ),
             Container(
-              margin: EdgeInsets.all(15),
-              height: 30,
-              width: 400,
+              margin: EdgeInsets.all(20),
+              height: 35,
+              width: 1300,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue, // background
-                    onPrimary: Colors.white, // foreground
+                    primary: Colors.purple[300],
+                    onPrimary: Colors.white,
                   ),
                   child: const Text('Pesan sekarang'),
                   onPressed: () {}),
