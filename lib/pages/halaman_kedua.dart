@@ -26,7 +26,13 @@ class _HalamanDuaState extends State<HalamanDua> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: Text('Ruangan mana yang akan kami bersihkan?'),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: Colors.white),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+            title: Text(
+              "MetClean",
+            ),
             backgroundColor: Colors.purple[300],
             actions: <Widget>[
               IconButton(icon: Icon(Icons.account_circle), onPressed: () {}),
@@ -34,6 +40,14 @@ class _HalamanDuaState extends State<HalamanDua> {
           ),
           body: Center(
               child: Column(children: <Widget>[
+            new Text(
+              "Ruangan mana yang akan kami bersihkan?",
+              style: new TextStyle(
+                fontStyle: FontStyle.normal,
+                fontSize: 20,
+                color: Colors.black,
+              ),
+            ),
             new Image.network(
                 'https://img.icons8.com/officel/2x/living-room.png',
                 width: 30,
