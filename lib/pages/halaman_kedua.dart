@@ -10,16 +10,6 @@ class HalamanDua extends StatefulWidget {
 }
 
 class _HalamanDuaState extends State<HalamanDua> {
-  TextEditingController rtengah = TextEditingController();
-  TextEditingController kamar = TextEditingController();
-  TextEditingController wc = TextEditingController();
-  TextEditingController dapur = TextEditingController();
-  int harga = 0;
-  int a = 0;
-  int b = 0;
-  int c = 0;
-  int d = 0;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,7 +44,7 @@ class _HalamanDuaState extends State<HalamanDua> {
                 height: 30,
                 fit: BoxFit.cover),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
               child: TextField(
                   controller: rtengah,
                   decoration: InputDecoration(
@@ -67,7 +57,7 @@ class _HalamanDuaState extends State<HalamanDua> {
             new Image.network('https://img.icons8.com/fluency/2x/bedroom.png',
                 width: 30, height: 30, fit: BoxFit.cover),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
               child: TextField(
                   controller: kamar,
                   decoration: InputDecoration(
@@ -80,7 +70,7 @@ class _HalamanDuaState extends State<HalamanDua> {
             new Image.network('https://img.icons8.com/color/2x/bath.png',
                 width: 30, height: 30, fit: BoxFit.cover),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
               child: TextField(
                   controller: wc,
                   decoration: InputDecoration(
@@ -93,7 +83,7 @@ class _HalamanDuaState extends State<HalamanDua> {
             new Image.network('https://img.icons8.com/dusk/2x/kitchen.png',
                 width: 30, height: 30, fit: BoxFit.cover),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
               child: TextField(
                   controller: dapur,
                   decoration: InputDecoration(
@@ -105,7 +95,7 @@ class _HalamanDuaState extends State<HalamanDua> {
             Container(
               margin: EdgeInsets.all(20),
               height: 35,
-              width: 100,
+              width: 1000,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.purple[300],
