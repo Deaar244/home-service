@@ -33,32 +33,45 @@ class HalamanHasil extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
-                  padding: EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(5.0),
                   width: 500,
-                  height: 65,
+                  height: 150,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade200,
-                        offset: Offset(0, 4),
-                        blurRadius: 10.0,
-                      ),
-                    ],
                   ),
                   child: Column(
                     children: [
-                      Row(
+                      Column(
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(15.0),
-                            child: Text(
-                              'Nama : $nama',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
+                          Text(
+                            'Nama : $nama',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            'Email : $email',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            'Alamat : $alamat',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            'Catatan : $catatan',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
                             ),
                           ),
                         ],
@@ -66,114 +79,43 @@ class HalamanHasil extends StatelessWidget {
                     ],
                   ),
                 )),
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-                child: Container(
-                  padding: EdgeInsets.all(20.0),
-                  width: 500,
-                  height: 65,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade200,
-                        offset: Offset(0, 4),
-                        blurRadius: 10.0,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(15.0),
-                            child: Text(
-                              'Email : $email',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-                child: Container(
-                  padding: EdgeInsets.all(20.0),
-                  width: 500,
-                  height: 65,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade200,
-                        offset: Offset(0, 4),
-                        blurRadius: 10.0,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(15.0),
-                            child: Text(
-                              'Telepon : $telepon',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-                child: Container(
-                  padding: EdgeInsets.all(20.0),
-                  width: 500,
-                  height: 65,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade200,
-                        offset: Offset(0, 4),
-                        blurRadius: 10.0,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(15.0),
-                            child: Text(
-                              'Alamat : $alamat',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                )),
+            // Padding(
+            //     padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+            //     child: Container(
+            //       padding: EdgeInsets.all(20.0),
+            //       width: 500,
+            //       height: 65,
+            //       decoration: BoxDecoration(
+            //         color: Colors.white,
+            //         borderRadius: BorderRadius.circular(20.0),
+            //         boxShadow: [
+            //           BoxShadow(
+            //             color: Colors.grey.shade200,
+            //             offset: Offset(0, 4),
+            //             blurRadius: 10.0,
+            //           ),
+            //         ],
+            //       ),
+            //       child: Column(
+            //         children: [
+            //           Row(
+            //             children: [
+            //               ClipRRect(
+            //                 borderRadius: BorderRadius.circular(15.0),
+            //                 child: Text(
+            //                   'Telepon : $telepon',
+            //                   style: TextStyle(
+            //                     color: Colors.black,
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //               ),
+            //             ],
+            //           )
+            //         ],
+            //       ),
+            //     )),
+
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
@@ -198,7 +140,7 @@ class HalamanHasil extends StatelessWidget {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(15.0),
                             child: Text(
-                              'Catatan : $catatan',
+                              'Total Pembayaran : ',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -210,17 +152,6 @@ class HalamanHasil extends StatelessWidget {
                     ],
                   ),
                 )),
-
-            // Container(
-            //   margin: EdgeInsets.all(10),
-            //   child: Text(
-            //     'Email : $email',
-            //     style: TextStyle(
-            //       color: Colors.black,
-            //       fontSize: 18,
-            //     ),
-            //   ),
-            // ),
             Column(
               children: [
                 // Text(
