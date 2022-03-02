@@ -97,7 +97,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
                     borderRadius: BorderRadius.circular(20.0),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade500,
                         offset: Offset(0, 4),
                         blurRadius: 10.0,
                       ),
@@ -191,7 +191,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) =>
-                                  HalamanEmpat(kirim: nilai.toString())));
+                                  HalamanEmpat(kirim: focusedDay.toString())));
                         }),
                   ),
                 ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/main.dart';
+import '/pages/halaman_kedua.dart';
 import '/pages/halaman_ketiga.dart';
 
 String kirim = '';
@@ -18,7 +19,7 @@ class HalamanDua extends StatefulWidget {
 }
 
 class _HalamanDuaState extends State<HalamanDua> {
-  // int harga = 150000;
+  int harga = 150000;
   // String a = "";
   // String b = "";
   // String c = "";

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import '/main.dart';
 import '/pages/halaman_lima.dart';
+import '/pages/halaman_ketiga.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class HalamanEmpat extends StatelessWidget {
+  CalendarFormat format = CalendarFormat.month;
+  DateTime selectedDay = DateTime.now();
+  DateTime focusedDay = DateTime.now();
   String kirim;
   HalamanEmpat({Key? key, required this.kirim}) : super(key: key);
   @override
@@ -20,8 +25,9 @@ class HalamanEmpat extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => HalamanHasil(
-                    kirim: nilai.toString(),
+                    kirim: focusedDay.toString(),
                     catatan: catatan.text,
+                    ttl: total.text,
                     nama: nama.text,
                     email: email.text,
                     telepon: telepon.text,

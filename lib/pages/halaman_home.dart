@@ -84,7 +84,7 @@ class HalamanSatu extends StatelessWidget {
                   primary: Colors.black,
                   onPrimary: Colors.white,
                 ),
-                child: const Text('Pesan sekarang'),
+                child: const Text('Selanjutnya'),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => HalamanDua(
