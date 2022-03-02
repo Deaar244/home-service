@@ -40,14 +40,14 @@ class HalamanHasil extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(10.0),
-                  width: 300,
-                  height: 100,
+                  width: 500,
+                  height: 110,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade500,
                         offset: Offset(0, 4),
                         blurRadius: 10.0,
                       ),
@@ -166,7 +166,7 @@ class HalamanHasil extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20.0),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade500,
                         offset: Offset(0, 4),
                         blurRadius: 10.0,
                       ),
@@ -174,15 +174,31 @@ class HalamanHasil extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
+                       Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              ('Tanggal : ' + focusedDay.toString()),
+                              style: TextStyle(
+                                fontStyle: FontStyle.normal,
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       Row(
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(15.0),
                             child: Text(
-                              'Total Pembayaran : ',
+                              'Total : ' + ttl.toString(),
                               style: TextStyle(
-                                color: Colors.black,
+                                fontStyle: FontStyle.normal,
                                 fontSize: 18,
+                                color: Colors.black,
                               ),
                             ),
                           ),
@@ -191,57 +207,6 @@ class HalamanHasil extends StatelessWidget {
                     ],
                   ),
                 )),
-                
-            // Column(
-            //   children: [
-                // Text(
-                //   'Catatan : $catatan',
-                // ),
-                // Text(
-                //   'Nama : $nama',
-                //   style: TextStyle(
-                //     color: Colors.black,
-                //     fontSize: 18,
-                //   ),
-                // ),
-                // Text(
-                //   'Email : $email',
-                //   style: TextStyle(
-                //     color: Colors.black,
-                //     fontSize: 18,
-                //   ),
-                // ),
-                // Text(
-                //   'Telepon : $telepon',
-                //   style: TextStyle(
-                //     color: Colors.black,
-                //     fontSize: 18,
-                //   ),
-                // ),
-                // Text(
-                //   'Alamat : $alamat',
-                //   style: TextStyle(
-                //     color: Colors.black,
-                //     fontSize: 18,
-                //   ),
-                // ),
-                // Column(
-                //   children: [
-                //     child: TextField(
-                //     Text(
-                //       "dea apriliani r",
-                //       style: TextStyle(
-                //         color: Colors.black,
-                //         fontSize: 18,
-                //       ),
-                //     ),
-                //     )
-                // SizedBox(
-                //   height: 5,
-                //   width: 15,
-                // ),
-            //   ],
-            // ),
             Container(
               margin: EdgeInsets.all(20),
               height: 35,
@@ -254,40 +219,40 @@ class HalamanHasil extends StatelessWidget {
                   child: const Text('Pesan sekarang'),
                   onPressed: () {}),
             ),
-            Container(
-              margin: EdgeInsets.all(20),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 30),
-                    // child: Text('Tanggal : ' + focusedDay.toString()),
-                    child: Text(
-                      'Tanggal : ' + focusedDay.toString(),
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    // child: Text('Total : ' + widget.data.ttl),
-                    margin: EdgeInsets.only(top: 30),
-                    child: Text(
-                      ' | Total : ' + ttl.toString(),
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-          ],
-        ))
+        //     Container(
+        //       margin: EdgeInsets.all(20),
+        //       child: Row(
+        //         children: [
+        //           Container(
+        //             margin: EdgeInsets.only(top: 30),
+        //             // child: Text('Tanggal : ' + focusedDay.toString()),
+        //             child: Text(
+        //               'Tanggal : ' + focusedDay.toString(),
+        //               textAlign: TextAlign.center,
+        //               style: TextStyle(
+        //                 fontStyle: FontStyle.normal,
+        //                 fontSize: 17,
+        //                 fontWeight: FontWeight.bold,
+        //                 color: Colors.black,
+        //               ),
+        //             ),
+        //           ),
+        //           Container(
+        //             // child: Text('Total : ' + widget.data.ttl),
+        //             margin: EdgeInsets.only(top: 30),
+        //             child: Text(
+        //               ' | Total : ' + ttl.toString(),
+        //               textAlign: TextAlign.center,
+        //               style: TextStyle(
+        //                 fontStyle: FontStyle.normal,
+        //                 fontSize: 17,
+        //                 fontWeight: FontWeight.bold,
+        //                 color: Colors.black,
+        //               ),
+        //             ),
+        //           ),
+        //   ],
+        // ))
         ]
         )
         ),
