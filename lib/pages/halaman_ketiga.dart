@@ -85,41 +85,96 @@ class _HalamanTigaState extends State<HalamanTiga> {
                 titleCentered: true,
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(20),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 30),
-                    // child: Text('Tanggal : ' + focusedDay.toString()),
-                    child: Text(
-                      'Tanggal : ' + focusedDay.toString(),
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  width: 500,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(0, 4),
+                        blurRadius: 10.0,
                       ),
-                    ),
+                    ],
                   ),
-                  Container(
-                    // child: Text('Total : ' + widget.data.ttl),
-                    margin: EdgeInsets.only(top: 30),
-                    child: Text(
-                      ' | Total : ' + widget.data.ttl,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              ('Tanggal : ' + focusedDay.toString()),
+                              style: TextStyle(
+                                fontStyle: FontStyle.normal,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                  )
-                ],
-              ),
-            ),
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Text(
+                              'Total : ' + widget.data.ttl,
+                              style: TextStyle(
+                                fontStyle: FontStyle.normal,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+            // Container(
+            //   margin: EdgeInsets.all(20),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(top: 30),
+            //         // child: Text('Tanggal : ' + focusedDay.toString()),
+            //         child: Text(
+            //           'Tanggal : ' + focusedDay.toString(),
+            //           textAlign: TextAlign.center,
+            //           style: TextStyle(
+            //             fontStyle: FontStyle.normal,
+            //             fontSize: 17,
+            //             fontWeight: FontWeight.bold,
+            //             color: Colors.black,
+            //           ),
+            //         ),
+            //       ),
+            //       Container(
+            //         // child: Text('Total : ' + widget.data.ttl),
+            //         margin: EdgeInsets.only(top: 30),
+            //         child: Text(
+            //           ' | Total : ' + widget.data.ttl,
+            //           textAlign: TextAlign.center,
+            //           style: TextStyle(
+            //             fontStyle: FontStyle.normal,
+            //             fontSize: 17,
+            //             fontWeight: FontWeight.bold,
+            //             color: Colors.black,
+            //           ),
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // ),
             Center(
               child: Column(
                 children: [
