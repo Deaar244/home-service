@@ -90,8 +90,8 @@ class _HalamanTigaState extends State<HalamanTiga> {
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(20.0),
-                  width: 500,
-                  height: 100,
+                  width: 400,
+                  height: 60,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),

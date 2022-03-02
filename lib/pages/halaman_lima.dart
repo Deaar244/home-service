@@ -34,8 +34,8 @@ class HalamanHasil extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
                   padding: EdgeInsets.all(10.0),
-                  width: 300,
-                  height: 100,
+                  width: 500,
+                  height: 110,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
