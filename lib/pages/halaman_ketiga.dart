@@ -136,7 +136,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) =>
-                                  HalamanEmpat(kirim: nilai.toString())));
+                                  HalamanEmpat(kirim: focusedDay.toString())));
                         }),
                   ),
                 ],
