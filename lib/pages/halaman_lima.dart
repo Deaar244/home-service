@@ -39,47 +39,80 @@ class HalamanHasil extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                 child: Container(
-                  padding: EdgeInsets.all(5.0),
-                  width: 500,
-                  height: 150,
+                  padding: EdgeInsets.all(10.0),
+                  width: 300,
+                  height: 100,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(0, 4),
+                        blurRadius: 10.0,
+                      ),
+                    ],
                   ),
                   child: Column(
                     children: [
                       Column(
                         children: [
-                          Text(
-                            'Nama : $nama',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
+                          Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(15.0),
+                                child: Text(
+                                  'Nama : $nama',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'Email : $email',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
+                          Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(15.0),
+                                child: Text(
+                                  'Email : $email',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'Alamat : $alamat',
-                            textAlign: TextAlign.right,
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
+                          Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(15.0),
+                                child: Text(
+                                  'Alamat : $alamat',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'Catatan : $catatan',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
-                          ),
+                          Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(15.0),
+                                child: Text(
+                                  'Catatan : $catatan',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
                         ],
                       )
                     ],
